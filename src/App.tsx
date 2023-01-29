@@ -20,7 +20,8 @@ const App = () => {
   useEffect(() => {
     getMovieRequest(searchTerm);
   }, [searchTerm]);
-
+    
+  {/* TODO: Make SearchBox a component, which returns the searchText and adds it on SetSearchTerm */}
   return (
     <div>
       <input
