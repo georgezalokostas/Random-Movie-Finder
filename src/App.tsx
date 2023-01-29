@@ -4,22 +4,32 @@ import MovieList from "./components/MovieList";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const getMovieRequest = async () => {
-    const url = "http://www.omdbapi.com/?apikey=19260989&s=Shawshank";
+  const getMovieRequest = async (searchTerm: string) => {
+    const url = `http://www.omdbapi.com/?apikey=19260989&s=${searchTerm}`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    setMovies(responseJson.Search);
+    if (responseJson.Search) {
+      setMovies(responseJson.Search);
+    }
   };
 
   useEffect(() => {
-    getMovieRequest();
-  }, []);
+    getMovieRequest(searchTerm);
+  }, [searchTerm]);
 
   return (
     <div>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
+      />
       <MovieList movies={movies} />
     </div>
   );
