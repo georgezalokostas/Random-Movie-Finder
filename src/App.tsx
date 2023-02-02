@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
+import SearchBox from "./components/SearchBox";
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+
+  interface IMovie {
+    Title: string;
+    Year: string;
+    imdbID: string;
+    Type: string;
+    Poster: string;
+  }
+
+  const [movies, setMovies] = useState<IMovie[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const getMovieRequest = async (searchTerm: string) => {
     const url = `http://www.omdbapi.com/?apikey=19260989&s=${searchTerm}`;
@@ -19,20 +29,11 @@ const App = () => {
   useEffect(() => {
     getMovieRequest(searchTerm);
   }, [searchTerm]);
-    
-  {/* TODO: Make SearchBox a component, which returns the searchText and adds it on SetSearchTerm */}
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search..."
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <MovieList movies={movies} />
-    </div>
-  );
+
+
+  //FIXME: Pass correct type of movies
+  //<SearchBox setSearchTerm={setSearchTerm} movies={movies} />  
+
 };
 
 export default App;
