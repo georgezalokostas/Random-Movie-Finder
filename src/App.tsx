@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from "react";
-import MovieList from "./components/MovieList";
+import { useState, useEffect } from "react";
+import { IMovie } from "./interfaces/IMovie";
 import SearchBox from "./components/SearchBox";
 
 const App = () => {
-
-  interface IMovie {
-    Title: string;
-    Year: string;
-    imdbID: string;
-    Type: string;
-    Poster: string;
-  }
-
   const [movies, setMovies] = useState<IMovie[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
@@ -30,10 +21,7 @@ const App = () => {
     getMovieRequest(searchTerm);
   }, [searchTerm]);
 
-
-  //FIXME: Pass correct type of movies
-  //<SearchBox setSearchTerm={setSearchTerm} movies={movies} />  
-
+  <SearchBox setSearchTerm={setSearchTerm} movies={movies} />;
 };
 
 export default App;

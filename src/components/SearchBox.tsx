@@ -1,10 +1,14 @@
 import { Dispatch, SetStateAction } from "react";
+import { IMovie } from "../interfaces/IMovie";
 import MovieList from "./MovieList";
 
-const SearchBox = (
-  { setSearchTerm }: { setSearchTerm: Dispatch<SetStateAction<string>> },
-  movies: string[]
-) => {
+const SearchBox = <T extends IMovie>({
+  setSearchTerm,
+  movies,
+}: {
+  setSearchTerm: Dispatch<SetStateAction<string>>;
+  movies: T[];
+}) => {
   return (
     <div>
       <input
