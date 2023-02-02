@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { isTemplateExpression } from "typescript";
 import MovieList from "./components/MovieList";
 
 const App = () => {
