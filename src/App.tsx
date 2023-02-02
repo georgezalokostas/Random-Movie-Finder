@@ -21,7 +21,7 @@ const App = () => {
     getMovieRequest(searchTerm);
   }, [searchTerm]);
 
-  <SearchBox setSearchTerm={setSearchTerm} movies={movies} />;
+  return <SearchBox<IMovie> setSearchTerm={setSearchTerm} movies={movies} />;
 };
 
 export default App;
