@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { IMovie } from "../interfaces/IMovie";
 import MovieList from "./MovieList";
+import "./SearchBox.css";
 
 const SearchBox = <T extends IMovie>({
   setSearchTerm,
@@ -10,16 +11,16 @@ const SearchBox = <T extends IMovie>({
   movies: T[];
 }) => {
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search..."
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
-      <MovieList movies={movies} />
-    </div>
+    <div className="searchbox">
+    <input
+      type="text"
+      placeholder="Search..."
+      onChange={(event) => {
+        setSearchTerm(event.target.value);
+      }}
+    />
+    <MovieList movies={movies} />
+  </div>
   );
 };
 
