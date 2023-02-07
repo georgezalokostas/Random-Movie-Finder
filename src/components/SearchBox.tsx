@@ -18,7 +18,7 @@ const SearchBox = <T extends IMovie>({
       onChange={(event) => {
         setSearchTerm(event.target.value);
       }}
-    />
+    />    
     <MovieList movies={movies} />
   </div>
   );

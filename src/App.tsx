@@ -21,7 +21,12 @@ const App = () => {
     getMovieRequest(searchTerm);
   }, [searchTerm]);
 
-  return <SearchBox<IMovie> setSearchTerm={setSearchTerm} movies={movies} />;
+  return (
+    <div className="Components">
+      <SearchBox<IMovie> setSearchTerm={setSearchTerm} movies={movies} />
+      <button>Find a movie!</button>
+    </div>
+  );
 };
 
 export default App;
