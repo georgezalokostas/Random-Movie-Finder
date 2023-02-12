@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { IMovie } from "./interfaces/IMovie";
-import SearchBox from "./components/SearchBox";
+import SearchButton from "./components/SearchButton";
 
 const App = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const getMovieRequest = async (searchTerm: string) => {
     const url = `http://www.omdbapi.com/?apikey=19260989&s=${searchTerm}`;
@@ -17,13 +16,11 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    getMovieRequest(searchTerm);
-  }, [searchTerm]);
+  const firstResult: IMovie = movies[0];
 
   return (
     <div className="Components">
-      <SearchBox<IMovie> setSearchTerm={setSearchTerm} movies={movies} />
+      <SearchButton getMovieRequest={getMovieRequest} firstResult={firstResult} />
     </div>
   );
 };
