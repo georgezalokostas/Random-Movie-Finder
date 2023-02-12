@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { IMovie } from "./interfaces/IMovie";
 import SearchButton from "./components/SearchButton";
 
@@ -16,11 +16,14 @@ const App = () => {
     }
   };
 
-  const firstResult: IMovie = movies[0];
+  const firstResult: IMovie | undefined = movies[0];
 
   return (
     <div className="Components">
-      <SearchButton getMovieRequest={getMovieRequest} firstResult={firstResult} />
+      <SearchButton
+        getMovieRequest={getMovieRequest}
+        firstResult={firstResult}
+      />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 import { IMovie } from "../interfaces/IMovie";
-import DisplayMovieDetails from "./MovieList";
+import DisplayMovieDetails from "./DisplayMovieDetails";
 import "./SearchButton.css";
 
 const SearchButton = ({
