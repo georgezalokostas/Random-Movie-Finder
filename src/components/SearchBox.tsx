@@ -10,17 +10,20 @@ const SearchBox = <T extends IMovie>({
   setSearchTerm: Dispatch<SetStateAction<string>>;
   movies: T[];
 }) => {
+  let searchTerm = "";
+
   return (
     <div className="searchbox">
-    <input
-      type="text"
-      placeholder="Search..."
-      onChange={(event) => {
-        setSearchTerm(event.target.value);
-      }}
-    />    
-    <MovieList movies={movies} />
-  </div>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={(event) => {
+          searchTerm = event.target.value;
+        }}
+      />
+      <button onClick={() => setSearchTerm(searchTerm)}>Click me</button>
+      <MovieList movies={movies} />
+    </div>
   );
 };
 
