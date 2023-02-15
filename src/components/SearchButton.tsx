@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 import { IMovie } from "../interfaces/IMovie";
 import DisplayMovieDetails from "./DisplayMovieDetails";
@@ -38,7 +37,7 @@ const SearchButton = ({
               setHideElements(true);
             }}
           >
-            Click me
+            Find a good one!
           </button>
         </div>
       )}
