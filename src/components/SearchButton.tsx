@@ -19,7 +19,12 @@ const SearchButton = ({
     <div className="searchbox">
       {!hideElements && (
         <div className="input-button">
+          <h2>
+            Get a random movie recommendation!
+            <br />
+          </h2>
           <input
+            className="search-text"
             type="text"
             placeholder="Search..."
             onChange={(event) => {
@@ -27,6 +32,7 @@ const SearchButton = ({
             }}
           />
           <button
+            className="search-button"
             onClick={() => {
               getMovieRequest(searchTerm);
               setHideElements(true);
