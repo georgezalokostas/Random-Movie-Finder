@@ -1,16 +1,7 @@
 import { IMovie } from "../interfaces/IMovie";
+import { resultsHeaderText } from "./ResultsHeaderText";
 
 const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
-  var resultsHeaderText = [
-    "Oh look what I found!",
-    "Here's a good one for you!",
-    "I'm sure you're gonna like this!",
-    "Hey, check this out!",
-    "This is a good one!",
-    "I've never seen this one!",
-    "",
-  ];
-
   if (!movie) {
     return <div />;
   }

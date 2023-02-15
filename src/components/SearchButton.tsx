@@ -14,6 +14,7 @@ const SearchButton = ({
   const [hideElements, setHideElements] = useState(false);
 
   //TODO: Remove searchbox and get results from a list of IMDB tags
+  //TODO: Get a random color on each refresh.
   return (
     <div className="searchbox">
       {!hideElements && (
