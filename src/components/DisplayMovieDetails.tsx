@@ -1,5 +1,5 @@
 import { IMovie } from "../interfaces/IMovie";
-import { resultsHeaderText } from "./ResultsHeaderText";
+import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 
 const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
   if (!movie) {
