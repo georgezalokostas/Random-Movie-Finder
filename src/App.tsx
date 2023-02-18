@@ -3,26 +3,24 @@ import { IMovie } from "./interfaces/IMovie";
 import SearchButton from "./components/SearchButton";
 
 const App = () => {
-  const [movies, setMovies] = useState<IMovie[]>([]);
+  const [movie, setMovies] = useState<IMovie | undefined>(undefined);
 
   const getMovieRequest = async (searchTerm: string) => {
-    const url = `http://www.omdbapi.com/?apikey=19260989&s=${searchTerm}`;
+    const url = `http://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    if (responseJson.Search) {
-      setMovies(responseJson.Search);
+    if (responseJson) {
+      setMovies(responseJson);
     }
   };
-
-  const firstResult: IMovie | undefined = movies[0];
 
   return (
     <div className="Components">
       <SearchButton
         getMovieRequest={getMovieRequest}
-        firstResult={firstResult}
+        movie={movie}
       />
     </div>
   );

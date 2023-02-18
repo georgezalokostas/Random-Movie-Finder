@@ -2,18 +2,22 @@ import { useState } from "react";
 import { IMovie } from "../interfaces/IMovie";
 import DisplayMovieDetails from "./DisplayMovieDetails";
 import "./SearchButton.css";
+import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 
 const SearchButton = ({
   getMovieRequest,
-  firstResult,
+  movie,
 }: {
   getMovieRequest: (searchTerm: string) => Promise<void>;
-  firstResult: IMovie;
+  movie: IMovie | undefined;
 }) => {
-  let searchTerm: string = "";
   const [hideElements, setHideElements] = useState(false);
 
-  //TODO: Remove searchbox and get results from a list of IMDB tags
+  const randomItemFromList =
+    Top250MoviesIDs[Math.floor(Math.random() * Top250MoviesIDs.length)];
+
+  console.log("Random item from list:" + randomItemFromList);
+
   //TODO: Get a random color on each refresh.
   return (
     <div className="searchbox">
@@ -23,18 +27,10 @@ const SearchButton = ({
             Get a random movie recommendation!
             <br />
           </h2>
-          <input
-            className="search-text"
-            type="text"
-            placeholder="Search..."
-            onChange={(event) => {
-              searchTerm = event.target.value;
-            }}
-          />
           <button
             className="search-button"
             onClick={() => {
-              getMovieRequest(searchTerm);
+              getMovieRequest(randomItemFromList);
               setHideElements(true);
             }}
           >
@@ -42,7 +38,7 @@ const SearchButton = ({
           </button>
         </div>
       )}
-      <DisplayMovieDetails movie={firstResult} />
+      <DisplayMovieDetails movie={movie} />
     </div>
   );
 };
