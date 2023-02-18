@@ -16,8 +16,6 @@ const SearchButton = ({
   const randomItemFromList =
     Top250MoviesIDs[Math.floor(Math.random() * Top250MoviesIDs.length)];
 
-  console.log("Random item from list:" + randomItemFromList);
-
   //TODO: Get a random color on each refresh.
   return (
     <div className="searchbox">
@@ -38,7 +36,7 @@ const SearchButton = ({
           </button>
         </div>
       )}
-      <DisplayMovieDetails movie={movie} />
+      <DisplayMovieDetails getMovieRequest={getMovieRequest} movie={movie} />
     </div>
   );
 };

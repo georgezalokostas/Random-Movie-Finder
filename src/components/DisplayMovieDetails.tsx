@@ -1,12 +1,23 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
+import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 
-const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
+const DisplayMovieDetails = ({
+  getMovieRequest,
+  movie,
+}: {
+  getMovieRequest: (searchTerm: string) => Promise<void>;
+  movie: IMovie | undefined;
+}) => {
   if (!movie) {
     return <div />;
   }
+
+  const randomItemFromList =
+    Top250MoviesIDs[Math.floor(Math.random() * Top250MoviesIDs.length)];
+
   return (
-    <div>
+    <div className="details">
       <h3>
         {
           resultsHeaderText[
@@ -14,14 +25,22 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
           ]
         }
       </h3>
-      <img src={movie.Poster} alt="movie"></img>
-      <h3> {movie.Title + " (" + movie.Year + ")"}</h3>
-      {/* <h3>Year: {movie.Year}</h3> */}
-      {/* <h3>Type: {movie.Type}</h3> */}
-      {/* <h3>ImdbID: {movie.imdbID}</h3> */}
+      <img src={movie.Poster} alt="Movie poster" />
+      <h3> {movie.Title + " (" + movie.Year + ")"} </h3>
+      <h3>{"⭐" + movie.imdbRating + "/10"}</h3>
+      <h5>{movie.Plot}</h5>
+      <h5>Directors: {movie.Director}</h5>
+      <h5>Starring: {movie.Actors}</h5>
+      <br />
+      <button
+        className="search-button"
+        onClick={() => {
+          getMovieRequest(randomItemFromList);
+        }}
+      >
+       Search Next
+      </button>
     </div>
-
-    //TODO: Open movie in IMDB (redirect)
   );
 };
 
