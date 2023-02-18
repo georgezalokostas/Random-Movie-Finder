@@ -17,6 +17,9 @@ const SearchButton = ({
     Top250MoviesIDs[Math.floor(Math.random() * Top250MoviesIDs.length)];
 
   //TODO: Get a random color on each refresh.
+  //TODO: Refactor randomItemFromList to be a function that returns a random item from the list.
+  //TODO: Pop the random item from the list so that it doesn't get repeated. Handle Exceptions for accessing same element after popped. 
+  //TODO: Blur the background color from the median of the movie's colors.  
   return (
     <div className="searchbox">
       {!hideElements && (
