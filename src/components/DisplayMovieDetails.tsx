@@ -1,6 +1,7 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
+import { getRandomItem } from "./Functions";
 
 const DisplayMovieDetails = ({
   getMovieRequest,
@@ -13,8 +14,7 @@ const DisplayMovieDetails = ({
     return <div />;
   }
 
-  const randomItemFromList =
-    Top250MoviesIDs[Math.floor(Math.random() * Top250MoviesIDs.length)];
+  const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
   return (
     <div className="details">
