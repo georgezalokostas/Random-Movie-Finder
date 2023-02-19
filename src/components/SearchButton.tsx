@@ -16,7 +16,6 @@ const SearchButton = ({
 
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
-  //TODO: Get a random color on each refresh.
   //TODO: Pop the random item from the list so that it doesn't get repeated. Handle Exceptions for accessing same element after popped.
   //TODO: Blur the background color from the median of the movie's colors.
 
