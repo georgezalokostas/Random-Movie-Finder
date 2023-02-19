@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IMovie } from "./interfaces/IMovie";
 import SearchButton from "./components/SearchButton";
+import { setTimeout } from "timers/promises";
 
 const App = () => {
   const [movie, setMovies] = useState<IMovie | undefined>(undefined);
-
+  
   const getMovieRequest = async (searchTerm: string) => {
     const url = `http://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
 
@@ -18,10 +19,7 @@ const App = () => {
 
   return (
     <div className="Components">
-      <SearchButton
-        getMovieRequest={getMovieRequest}
-        movie={movie}
-      />
+      <SearchButton getMovieRequest={getMovieRequest} movie={movie} />
     </div>
   );
 };
