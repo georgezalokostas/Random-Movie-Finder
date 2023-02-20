@@ -16,6 +16,10 @@ const DisplayMovieDetails = ({
   }
 
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
+  const genres = movie.Genre.split(", ");
+
+  //TODO: Fix flexbox's elements size when window shrinks.
+  //TODO: Continue styling the page from open in IMDB and below.
 
   return (
     <div>
@@ -31,7 +35,13 @@ const DisplayMovieDetails = ({
           <img src={movie.Poster} alt="Movie poster" />
         </div>
         <div className="flexbox-item2">
-          <h3>{movie.Title + " (" + movie.Year + ")"}</h3>
+          <br /> <br /> <br /> <br /> <br />
+          <h3 className="movie-title">
+            {movie.Title + " (" + movie.Year + ")"}
+          </h3>
+          <hr className="solid"></hr>
+          <h4 className="genres"> {genres.join(", ")} </h4>
+          <br /> <br />
           <h3>
             <a
               href={"https://www.imdb.com/title/" + movie.imdbID}
@@ -51,7 +61,7 @@ const DisplayMovieDetails = ({
             }}
           >
             Find Next Movie!
-          </button>          
+          </button>
         </div>
       </div>
     </div>
