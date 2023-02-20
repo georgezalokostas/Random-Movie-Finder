@@ -97,7 +97,6 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-tsconfig.json
 package-lock.json
 settings.json
 manifest.json
