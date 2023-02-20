@@ -4,6 +4,7 @@ import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
 import "./Styles.css";
 
+
 const DisplayMovieDetails = ({
   getMovieRequest,
   movie,
@@ -16,7 +17,6 @@ const DisplayMovieDetails = ({
   }
 
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
-  const genres = movie.Genre.split(", ");
 
   //TODO: Fix flexbox's elements size when window shrinks.
   //TODO: Continue styling the page from open in IMDB and below.
@@ -40,7 +40,7 @@ const DisplayMovieDetails = ({
             {movie.Title + " (" + movie.Year + ")"}
           </h3>
           <hr className="solid"></hr>
-          <h4 className="genres"> {genres.join(", ")} </h4>
+          <h4 className="genres"> {movie.Genre} </h4>
           <br /> <br />
           <h3>
             <a
