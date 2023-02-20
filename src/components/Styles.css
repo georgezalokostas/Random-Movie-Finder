@@ -1,0 +1,53 @@
+html {
+  background-color:  #82a6ee;  
+  height: 100%;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+}
+
+.searchBtn{ 
+  font-size: 15px;
+  text-align: center;
+  padding: 1%;
+}
+
+.results {
+  display: flex;
+}
+
+.header{
+  text-align: center;
+  font-size: 30px;  
+  margin-top: 7%;
+}
+
+.poster{
+  display: flex;
+  font-size: 20px;
+  padding: 1%;
+  margin-left: 15%;
+  margin-top: 15%;
+  transform: scale(1.2, 1.2);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  margin-top: 15%;
+  margin-left: 5%;
+}
