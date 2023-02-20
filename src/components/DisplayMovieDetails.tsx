@@ -19,18 +19,18 @@ const DisplayMovieDetails = ({
 
   return (
     <div>
-      <div className="results">
-        <h3 className="header">
-          {
-            resultsHeaderText[
-              Math.floor(Math.random() * resultsHeaderText.length)
-            ]
-          }
-        </h3>
-        <div className="poster">
+      <h3 className="header">
+        {
+          resultsHeaderText[
+            Math.floor(Math.random() * resultsHeaderText.length)
+          ]
+        }
+      </h3>
+      <div className="flexbox-container">
+        <div className="flexbox-item1">
           <img src={movie.Poster} alt="Movie poster" />
         </div>
-        <div className="details">
+        <div className="flexbox-item2">
           <h3>{movie.Title + " (" + movie.Year + ")"}</h3>
           <h3>
             <a
@@ -45,16 +45,15 @@ const DisplayMovieDetails = ({
           <h5>Starring: {movie.Actors}</h5>
           <h5>{movie.Plot}</h5>
           <br />
+          <button
+            onClick={() => {
+              getMovieRequest(randomItemFromList);
+            }}
+          >
+            Find Next Movie!
+          </button>          
         </div>
       </div>
-      <button
-        className="nextMovieBtn"
-        onClick={() => {
-          getMovieRequest(randomItemFromList);
-        }}
-      >
-        Search Next
-      </button>
     </div>
   );
 };
