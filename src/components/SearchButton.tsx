@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IMovie } from "../interfaces/IMovie";
 import DisplayMovieDetails from "./DisplayMovieDetails";
-import "./SearchButton.css";
+import "./Styles.css";
 import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
 
@@ -19,13 +19,12 @@ const SearchButton = ({
   return (
     <div className="searchbox">
       {!hideElements && (
-        <div className="input-button">
+        <div className="home-page">
           <h2>
             Get a random movie recommendation!
             <br />
           </h2>
-          <button
-            className="search-button"
+          <button className="searchBtn"
             onClick={() => {
               getMovieRequest(randomItemFromList);
               setHideElements(true);
