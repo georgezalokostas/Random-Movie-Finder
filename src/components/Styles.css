@@ -52,7 +52,12 @@ body {
   min-height: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;  
+}
+
+.poster{
+  border-radius: 1.2rem;
+  filter: drop-shadow(15px 15px 15px black);
 }
 
 .flexbox-item2 {

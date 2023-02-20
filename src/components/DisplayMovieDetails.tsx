@@ -32,7 +32,7 @@ const DisplayMovieDetails = ({
       </h3>
       <div className="flexbox-container">
         <div className="flexbox-item1">
-          <img src={movie.Poster} alt="Movie poster" />
+          <img className="poster" src={movie.Poster} alt="Movie poster" />
         </div>
         <div className="flexbox-item2">
           <br /> <br /> <br /> <br /> <br />
