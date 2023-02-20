@@ -97,7 +97,10 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-*.json
+tsconfig.json
+package-lock.json
+settings.json
+manifest.json
 
 # Chutzpah Test files
 _Chutzpah*
