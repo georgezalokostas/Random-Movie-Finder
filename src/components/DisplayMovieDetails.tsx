@@ -19,7 +19,6 @@ const DisplayMovieDetails = ({
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
   //TODO: Fix flexbox's elements size when window shrinks.
-  //TODO: Continue styling the page from open in IMDB and below.
 
   return (
     <div>
