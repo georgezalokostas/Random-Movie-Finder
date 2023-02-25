@@ -20,7 +20,6 @@ const DisplayMovieDetails = ({
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
   //TODO: Fix flexbox's elements size when window shrinks.
-  //TODO: Add url to watch movie in Fmovies.
 
   return (
     <div>
@@ -60,12 +59,21 @@ const DisplayMovieDetails = ({
           </h3>
           <h4 className="openIn">Watch in</h4>
           <h3>
-            {/* <a
-              href={"https://www.imdb.com/title/" + movie.imdbID}
+            <a
+              href={
+                "https://fmovies.ps/search/" +
+                movie.Title.split(" ").join("-") +
+                "-" +
+                movie.Year
+              }
               target="_blank"
             >
-              <img className="fmovieslogo" src={fmoviesLogo} alt="Fmovies Logo" />
-            </a> */}
+              <img
+                className="fmovieslogo"
+                src={fmoviesLogo}
+                alt="Fmovies Logo"
+              />
+            </a>
           </h3>
           <br />
           <button
