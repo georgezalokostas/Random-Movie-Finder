@@ -4,6 +4,7 @@ import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
 import "./Styles.css";
 import imdbLogo from "../images/imdb.png";
+import fmoviesLogo from "../images/fmovies.png";
 
 const DisplayMovieDetails = ({
   getMovieRequest,
@@ -19,6 +20,7 @@ const DisplayMovieDetails = ({
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
   //TODO: Fix flexbox's elements size when window shrinks.
+  //TODO: Add url to watch movie in Fmovies.
 
   return (
     <div>
@@ -37,7 +39,9 @@ const DisplayMovieDetails = ({
           <br /> <br /> <br /> <br /> <br />
           <h3 className="movie-title">
             {movie.Title + " (" + movie.Year + ")"}
-            <br/><br/>{"⭐" + movie.imdbRating + "/10"}
+            <br />
+            <br />
+            {"⭐" + movie.imdbRating + "/10"}
           </h3>
           <hr className="solidLine"></hr>
           <h4 className="genres"> {movie.Genre} </h4>
@@ -51,18 +55,18 @@ const DisplayMovieDetails = ({
               href={"https://www.imdb.com/title/" + movie.imdbID}
               target="_blank"
             >
-              <img className="imdbLogo" src={imdbLogo} alt="IMDb Logo" />
+              <img className="imdblogo" src={imdbLogo} alt="IMDb Logo" />
             </a>
           </h3>
-          {/* <h4 className="openIn">Search in</h4>
+          <h4 className="openIn">Watch in</h4>
           <h3>
-            <a
+            {/* <a
               href={"https://www.imdb.com/title/" + movie.imdbID}
               target="_blank"
             >
-              <img className="imdbLogo" src={imdbLogo} alt="IMDb Logo" />
-            </a>
-          </h3> */}
+              <img className="fmovieslogo" src={fmoviesLogo} alt="Fmovies Logo" />
+            </a> */}
+          </h3>
           <br />
           <button
             onClick={() => {

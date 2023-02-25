@@ -40,8 +40,8 @@ body {
   margin-top: 5%;
   justify-content: space-around;
   margin: auto;
-  border: 3px solid black;
-  border-radius: 2rem;
+  border: 2px solid black;
+  border-radius: 1.5rem;
 }
 
 .flexbox-item1 {
@@ -91,7 +91,12 @@ a {
   justify-content: center;
 }
 
-.imdbLogo {   
-  width: 85px;
-  height: 40px;
+.imdblogo {   
+  width: 60px;
+  height: 30px;
+}
+
+.fmovieslogo{
+  width: 70px;
+  height: 30px;
 }
