@@ -75,13 +75,23 @@ body {
   text-align: center;
 }
 
-hr.solid {
+hr.solidLine {
   border-top: 1px solid black;
 }
 
-.genres {
+.genres, .openIn {
   padding: 0;
   margin: 0;
   align-items: center;
   text-align: center;  
+}
+
+a {
+  display: flex;
+  justify-content: center;
+}
+
+.imdbLogo {   
+  width: 85px;
+  height: 40px;
 }

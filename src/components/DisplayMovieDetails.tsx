@@ -3,7 +3,7 @@ import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
 import "./Styles.css";
-
+import imdbLogo from "../images/imdb.png";
 
 const DisplayMovieDetails = ({
   getMovieRequest,
@@ -37,22 +37,32 @@ const DisplayMovieDetails = ({
           <br /> <br /> <br /> <br /> <br />
           <h3 className="movie-title">
             {movie.Title + " (" + movie.Year + ")"}
+            <br/><br/>{"⭐" + movie.imdbRating + "/10"}
           </h3>
-          <hr className="solid"></hr>
+          <hr className="solidLine"></hr>
           <h4 className="genres"> {movie.Genre} </h4>
-          <br /> <br />
+          <br />
+          <h5>By: {movie.Director}</h5>
+          <h5>{movie.Plot}</h5>
+          <h5>Starring: {movie.Actors}</h5>
+          <h4 className="openIn">Open in</h4>
           <h3>
             <a
               href={"https://www.imdb.com/title/" + movie.imdbID}
               target="_blank"
             >
-              Open in IMDB
+              <img className="imdbLogo" src={imdbLogo} alt="IMDb Logo" />
             </a>
-            {" - ⭐" + movie.imdbRating + "/10"}
           </h3>
-          <h5>By: {movie.Director}</h5>
-          <h5>Starring: {movie.Actors}</h5>
-          <h5>{movie.Plot}</h5>
+          {/* <h4 className="openIn">Search in</h4>
+          <h3>
+            <a
+              href={"https://www.imdb.com/title/" + movie.imdbID}
+              target="_blank"
+            >
+              <img className="imdbLogo" src={imdbLogo} alt="IMDb Logo" />
+            </a>
+          </h3> */}
           <br />
           <button
             onClick={() => {
