@@ -5,6 +5,7 @@ import { getRandomItem } from "./Functions";
 import "./Styles.css";
 import imdbLogo from "../images/imdb.png";
 import fmoviesLogo from "../images/fmovies.png";
+import watchMoviesHDLogo from "../images/watchmovieshd.png";
 
 const DisplayMovieDetails = ({
   getMovieRequest,
@@ -37,13 +38,12 @@ const DisplayMovieDetails = ({
         <div className="flexbox-item2">
           <br /> <br /> <br /> <br /> <br />
           <h3 className="movie-title">
-            {movie.Title + " (" + movie.Year + ")"}
-            <br />
-            <br />
-            {"⭐" + movie.imdbRating + "/10"}
+            {movie.Title + " " + "(" + movie.Year + ")"}
           </h3>
           <hr className="solidLine"></hr>
-          <h4 className="genres"> {movie.Genre} </h4>
+          <h4 className="genres">
+            {movie.Genre + " " + " | " + " " + "⭐" + movie.imdbRating + "/10"}
+          </h4>
           <br />
           <h5>By: {movie.Director}</h5>
           <h5>{movie.Plot}</h5>
@@ -76,15 +76,17 @@ const DisplayMovieDetails = ({
             </a>
           </h3>
           <br />
-          <button
-            onClick={() => {
-              getMovieRequest(randomItemFromList);
-            }}
-          >
-            Find Next Movie!
-          </button>
+          <br />
         </div>
       </div>
+      <button
+        className="nextMovie"
+        onClick={() => {
+          getMovieRequest(randomItemFromList);
+        }}
+      >
+        Next Movie!
+      </button>
     </div>
   );
 };
