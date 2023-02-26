@@ -21,6 +21,7 @@ const DisplayMovieDetails = ({
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
   //TODO: Fix flexbox's elements size when window shrinks.
+  //TODO: Fetch a batch of 10 movies, and when the array shrinks to 2-3, fetch another batch of 10.
 
   return (
     <div>
