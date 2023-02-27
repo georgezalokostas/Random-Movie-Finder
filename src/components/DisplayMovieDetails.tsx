@@ -73,10 +73,9 @@ const DisplayMovieDetails = ({
               />
             </a>
           </h3>
-          <br />
-          <br />
         </div>
       </div>
+      <hr className="solidLineEnd"></hr>
       <button
         className="nextMovie"
         onClick={() => {
