@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IMovie } from "../interfaces/IMovie";
 import DisplayMovieDetails from "./DisplayMovieDetails";
-import "./Styles.css";
 import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
 

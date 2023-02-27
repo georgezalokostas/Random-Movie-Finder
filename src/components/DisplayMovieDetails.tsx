@@ -2,10 +2,8 @@ import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
-import "./Styles.css";
 import imdbLogo from "../images/imdb.png";
 import fmoviesLogo from "../images/fmovies.png";
-import watchMoviesHDLogo from "../images/watchmovieshd.png";
 
 const DisplayMovieDetails = ({
   getMovieRequest,
