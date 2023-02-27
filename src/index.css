@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -47,25 +47,23 @@ body {
   margin-top: 7%;
 }
 
-.flexbox-container {
+.container {
   display: flex;
   width: 70%;
-  height: 700px;
   margin-top: 5%;
-  justify-content: space-around;
   margin: auto;
-  border-radius: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.flexbox-item1 {
-  flex: 1;
-  box-sizing: border-box;
-  flex-shrink: 0;
+.item1 {
   min-width: 0;
   min-height: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+
 }
 
 .poster {
@@ -73,14 +71,11 @@ body {
   filter: drop-shadow(15px 15px 15px black);
 }
 
-.flexbox-item2 {
+.item2 {
   flex: 1;
-  flex-shrink: 0;
-  min-width: 0;
-  min-height: 0;
-  max-height: 100%;
+  min-width: 50%;
   padding: 10px;
-  margin-left: 5%;
+  align-items: center;
 }
 
 .movie-title {
@@ -124,8 +119,8 @@ a {
   text-align: center;
   font-size: 16px;
   border-radius: 0.5rem;
-  margin:0 auto;
-  display:block;
+  margin: 0 auto;
+  display: block;
 }
 
 .nextMovie:hover {

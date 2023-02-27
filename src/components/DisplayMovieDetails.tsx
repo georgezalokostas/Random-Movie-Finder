@@ -18,7 +18,6 @@ const DisplayMovieDetails = ({
 
   const randomItemFromList = getRandomItem(Top250MoviesIDs);
 
-  //TODO: Fix flexbox's elements size when window shrinks.
   //TODO: Fetch a batch of 10 movies, and when the array shrinks to 2-3, fetch another batch of 10.
 
   return (
@@ -30,11 +29,11 @@ const DisplayMovieDetails = ({
           ]
         }
       </h3>
-      <div className="flexbox-container">
-        <div className="flexbox-item1">
+      <div className="container">
+        <div className="item1">
           <img className="poster" src={movie.Poster} alt="Movie poster" />
         </div>
-        <div className="flexbox-item2">
+        <div className="item2">
           <br /> <br /> <br /> <br /> <br />
           <h3 className="movie-title">
             {movie.Title + " " + "(" + movie.Year + ")"}
