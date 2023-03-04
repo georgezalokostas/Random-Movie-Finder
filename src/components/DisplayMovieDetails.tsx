@@ -2,8 +2,6 @@ import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
-import imdbLogo from "../images/imdb.png";
-import fmoviesLogo from "../images/fmovies.png";
 
 const DisplayMovieDetails = ({
   getMovieRequest,
@@ -52,7 +50,7 @@ const DisplayMovieDetails = ({
               href={"https://www.imdb.com/title/" + movie.imdbID}
               target="_blank"
             >
-              <img className="imdblogo" src={imdbLogo} alt="IMDb Logo" />
+              <img className="imdblogo" src="/imdb.png" alt="IMDb Logo" />
             </a>
           </h3>
           <h4 className="openIn">Watch in</h4>
@@ -68,7 +66,7 @@ const DisplayMovieDetails = ({
             >
               <img
                 className="fmovieslogo"
-                src={fmoviesLogo}
+                src="/fmovies.png"
                 alt="Fmovies Logo"
               />
             </a>
