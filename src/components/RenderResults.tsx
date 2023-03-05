@@ -4,19 +4,15 @@ import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./Functions";
 
 const DisplayMovieDetails = ({
-  getMovieRequest,
+  GetMovieData,
   movie,
 }: {
-  getMovieRequest: (searchTerm: string) => Promise<void>;
+  GetMovieData: () => Promise<void>;
   movie: IMovie | undefined;
 }) => {
   if (!movie) {
     return <div />;
   }
-
-  const randomItemFromList = getRandomItem(Top250MoviesIDs);
-
-  //TODO: Fetch a batch of 10 movies, and when the array shrinks to 2-3, fetch another batch of 10.
 
   return (
     <div>
@@ -77,7 +73,7 @@ const DisplayMovieDetails = ({
       <button
         className="nextMovie"
         onClick={() => {
-          getMovieRequest(randomItemFromList);
+          GetMovieData();
         }}
       >
         Next Movie!
