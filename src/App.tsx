@@ -29,6 +29,7 @@ const App = () => {
 
     if (populateMovies === true) {
       PopulateMoviesArray();
+      setPopulateMovies(false);
     }
   }, [populateMovies]);
 
@@ -36,12 +37,27 @@ const App = () => {
 
   if (movies.length > 3) setPopulateMovies(false);
 
+  const RenderMovie = () => {
+    return movies.shift();
+  };
+
   if (movies.length === 0) {
     return <div>Loading...</div>;
   } else {
     return (
       <div className="Components">
-        <RenderResults GetMovieData={GetMovieData} movie={movies.shift()} />
+        <RenderResults movie={RenderMovie()} />
+        <button
+          className="nextMovie"
+          onClick={() => {
+            if (movies.length < 3) {
+              setPopulateMovies(true);              
+            }
+            RenderMovie();
+          }}
+        >
+          Next Movie!
+        </button>
       </div>
     );
   }

@@ -1,13 +1,9 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
-import { Top250MoviesIDs } from "./text_arrays/Top250MoviesIDs";
-import { getRandomItem } from "./Functions";
 
 const DisplayMovieDetails = ({
-  GetMovieData,
   movie,
 }: {
-  GetMovieData: () => Promise<void>;
   movie: IMovie | undefined;
 }) => {
   if (!movie) {
@@ -69,15 +65,7 @@ const DisplayMovieDetails = ({
           </h3>
         </div>
       </div>
-      <hr className="solidLineEnd"></hr>
-      <button
-        className="nextMovie"
-        onClick={() => {
-          GetMovieData();
-        }}
-      >
-        Next Movie!
-      </button>
+      <hr className="solidLineEnd"></hr>     
     </div>
   );
 };
