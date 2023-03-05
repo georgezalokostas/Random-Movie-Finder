@@ -37,7 +37,6 @@ const App = () => {
 
   console.log("Use Effect called. Movies size: " + movies.length);
 
-
   if (movies.length === 0) {
     return <div>Loading...</div>;
   } else {
@@ -50,7 +49,7 @@ const App = () => {
             if (movies.length < 3) {
               setPopulateMovies(true);
             }
-            RenderMovie();
+            <RenderResults movie={RenderMovie()} />;
           }}
         >
           Next Movie!
