@@ -34,17 +34,17 @@ const App = () => {
 
   console.log("Use Effect called. Movies size: " + movies.length);
 
-  if (movies.length === 0) return <div>Loading...</div>;
+  if (movies.length > 3) setPopulateMovies(false);
 
-  let renderedMovie = movies.shift();
-
-  if(movies.length > 3) setPopulateMovies(false);
-
-  return (
-    <div className="Components">
-      <RenderResults GetMovieData={GetMovieData} movie={renderedMovie} />
-    </div>
-  );
+  if (movies.length === 0) {
+    return <div>Loading...</div>;
+  } else {
+    return (
+      <div className="Components">
+        <RenderResults GetMovieData={GetMovieData} movie={movies.shift()} />
+      </div>
+    );
+  }
 };
 
 export default App;
