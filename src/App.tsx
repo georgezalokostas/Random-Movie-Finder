@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IMovie } from "./interfaces/IMovie";
-import SearchButton from "./components/SearchButton";
+import RenderResults from "./components/RenderResults";
+import { Top250MoviesIDs } from "./components/text_arrays/Top250MoviesIDs";
+import { getRandomItem } from "./components/Functions";
 
 const App = () => {
   const [movie, setMovies] = useState<IMovie | undefined>(undefined);
@@ -16,9 +18,14 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    let movie = getRandomItem(Top250MoviesIDs);
+    getMovieRequest(movie);
+  }, []);
+
   return (
     <div className="Components">
-      <SearchButton getMovieRequest={getMovieRequest} movie={movie} />
+      <RenderResults getMovieRequest={getMovieRequest} movie={movie} />
     </div>
   );
 };
