@@ -8,6 +8,19 @@ const App = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
   const [populateMovies, setPopulateMovies] = useState<boolean>(true);
 
+  useEffect(() => {
+    const PopulateMoviesArray = async () => {
+      await GetMovieData();
+    };
+
+    if (populateMovies === true) {
+      PopulateMoviesArray();
+      setPopulateMovies(false);
+    }
+  }, [populateMovies]);
+
+  const RenderMovie = () => movies.shift();
+
   const GetMovieData = async () => {
     let searchTerm = getRandomItem(Top250MoviesIDs);
     const url = `http://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
@@ -22,24 +35,8 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    const PopulateMoviesArray = async () => {
-      await GetMovieData();
-    };
-
-    if (populateMovies === true) {
-      PopulateMoviesArray();
-      setPopulateMovies(false);
-    }
-  }, [populateMovies]);
-
   console.log("Use Effect called. Movies size: " + movies.length);
 
-  if (movies.length > 3) setPopulateMovies(false);
-
-  const RenderMovie = () => {
-    return movies.shift();
-  };
 
   if (movies.length === 0) {
     return <div>Loading...</div>;
@@ -51,7 +48,7 @@ const App = () => {
           className="nextMovie"
           onClick={() => {
             if (movies.length < 3) {
-              setPopulateMovies(true);              
+              setPopulateMovies(true);
             }
             RenderMovie();
           }}
