@@ -1,11 +1,7 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 
-const DisplayMovieDetails = ({
-  movie,
-}: {
-  movie: IMovie | undefined;
-}) => {
+const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
   if (!movie) {
     return <div />;
   }
@@ -65,7 +61,7 @@ const DisplayMovieDetails = ({
           </h3>
         </div>
       </div>
-      <hr className="solidLineEnd"></hr>     
+      <hr className="solidLineEnd"></hr>
     </div>
   );
 };
