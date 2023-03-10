@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { IMovie } from "./interfaces/IMovie";
 import RenderResults from "./components/RenderResults";
-import { Top250MoviesIDs } from "./components/text_arrays/Top250MoviesIDs";
+import { MoviesIDs } from "./components/text_arrays/Top250MoviesIDs";
 import { getRandomItem } from "./components/Functions";
 
 const App = () => {
   const [movie, setMovie] = useState<IMovie>();
 
   const GetMovieData = async () => {
-    let searchTerm = getRandomItem(Top250MoviesIDs);
+    let searchTerm = getRandomItem(MoviesIDs);
     const url = `http://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
 
     const response = await fetch(url);
