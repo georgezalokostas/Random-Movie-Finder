@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Random_Movie_Picker/static/css/main.0160707a.css",
+    "main.js": "/Random_Movie_Picker/static/js/main.dd5e05f7.js",
+    "index.html": "/Random_Movie_Picker/index.html",
+    "main.0160707a.css.map": "/Random_Movie_Picker/static/css/main.0160707a.css.map",
+    "main.dd5e05f7.js.map": "/Random_Movie_Picker/static/js/main.dd5e05f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0160707a.css",
+    "static/js/main.dd5e05f7.js"
+  ]
+}
