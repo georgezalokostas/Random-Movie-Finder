@@ -32,17 +32,15 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
           <h5>By: {movie.Director}</h5>
           <h5>{movie.Plot}</h5>
           <h5>Starring: {movie.Actors}</h5>
-          <h4 className="openIn">Open in</h4>
-          <h3>
+          <div className="buttons-container">
             <a
               href={"https://www.imdb.com/title/" + movie.imdbID}
               target="_blank"
+              className="imdbButton"
             >
+              <span className="openIn">Open in: </span>
               <img className="imdblogo" src="/imdb.png" alt="IMDb Logo" />
             </a>
-          </h3>
-          <h4 className="openIn">Watch in</h4>
-          <h3>
             <a
               href={
                 "https://fmovies.ps/search/" +
@@ -51,14 +49,16 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
                 movie.Year
               }
               target="_blank"
+              className="fmoviesButton"
             >
+              <span className="openIn">Watch in: </span>
               <img
                 className="fmovieslogo"
                 src="/fmovies.png"
                 alt="Fmovies Logo"
               />
             </a>
-          </h3>
+          </div>
         </div>
       </div>
       <hr className="solidLineEnd"></hr>

@@ -135,3 +135,42 @@ a {
   background-color: rgb(1, 149, 149);
   cursor: pointer;
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.imdbButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5c518;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  border-color: #000000;
+  border: 1.2px solid black;
+}
+
+.fmoviesButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00acc1;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  border: 1.2px solid black;
+}
