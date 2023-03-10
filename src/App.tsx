@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IMovie } from "./interfaces/IMovie";
 import RenderResults from "./components/RenderResults";
-import { MoviesIDs } from "./components/text_arrays/Top250MoviesIDs";
+import { MoviesIDs } from "./components/text_arrays/MoviesIDs";
 import { getRandomItem } from "./components/Functions";
 
 const App = () => {
@@ -16,6 +16,8 @@ const App = () => {
 
     if (responseJson) {
       setMovie(responseJson);
+    }else{
+      <h4>A problem encountered while using the API.</h4>
     }
   };
 
