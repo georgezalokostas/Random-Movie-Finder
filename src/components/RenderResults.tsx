@@ -59,7 +59,7 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               target="_blank"
               className="fmoviesButton"
             >
-              <span className="openIn">Search in: </span>
+              <span className="openIn">Watch in: </span>
               <img className="fmovieslogo" src={fmoviesLogo} alt="Fmovies" />
             </a>
             <a
