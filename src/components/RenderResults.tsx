@@ -1,11 +1,10 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClapperboard } from "@fortawesome/free-solid-svg-icons";
 import imdbLogo from "./images/imdb.png";
 import fmoviesLogo from "./images/fmovies.png";
 import teniesOnlineLogo from "./images/teniesonline.png";
-import watchMoviesHD from "./images/watchmovieshd.png";
+import watchMoviesHDLogo from "./images/watchmovieshd.png";
+import rottenTomatoesLogo from "./images/rottentomatoes.png";
 
 const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
   if (!movie) {
@@ -14,13 +13,6 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
 
   return (
     <div>
-      <h3 className="header">
-        {
-          resultsHeaderText[
-            Math.floor(Math.random() * resultsHeaderText.length)
-          ]
-        }
-      </h3>
       <div className="container">
         <div className="item1">
           <img className="poster" src={movie.Poster} alt="Movie poster" />
@@ -44,6 +36,14 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               <span>Open in:</span>
               <img className="imdblogo" src={imdbLogo} alt="IMDB" />
             </a>
+            <a
+              href={"https://www.rottentomatoes.com/search?search=" + movie.Title.split(" ").join("+") + movie.Year}
+              target="_blank"
+              className="rottentomatoesButton"
+            >
+              <span>Open in:</span>
+              <img className="rottentomatoeslogo" src={rottenTomatoesLogo} alt="RottenTomatoes" />
+            </a>
           </div>
           <h5>By: {movie.Director}</h5>
           <h5>{movie.Plot}</h5>
@@ -59,7 +59,7 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               target="_blank"
               className="fmoviesButton"
             >
-              <span className="openIn">Watch in: </span>
+              <span className="openIn">Search in: </span>
               <img className="fmovieslogo" src={fmoviesLogo} alt="Fmovies" />
             </a>
             <a
@@ -84,7 +84,7 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               className="watchMoviesHDButton"
             >
               <span className="openIn">Search in:</span>
-              <img className="watchmovieshdlogo" src={watchMoviesHD} />
+              <img className="watchmovieshdlogo" src={watchMoviesHDLogo} />
             </a>
           </div>
         </div>
