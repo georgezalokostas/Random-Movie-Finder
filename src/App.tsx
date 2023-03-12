@@ -11,7 +11,7 @@ const App = () => {
 
   const GetMovieData = async () => {
     let searchTerm = getRandomItem(MoviesIDs);
-    const url = `http://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
+    const url = `https://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
