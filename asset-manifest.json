@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Random-Movie-Finder/static/css/main.3b3e20d1.css",
-    "main.js": "/Random-Movie-Finder/static/js/main.9ef29456.js",
+    "main.js": "/Random-Movie-Finder/static/js/main.b537de09.js",
     "static/media/rottentomatoes.png": "/Random-Movie-Finder/static/media/rottentomatoes.b04fe1f023c57abcf2f6.png",
     "static/media/fmovies.png": "/Random-Movie-Finder/static/media/fmovies.4fe00a0a434000d5babb.png",
     "static/media/watchmovieshd.png": "/Random-Movie-Finder/static/media/watchmovieshd.3d3c04d1bd3acdf646ed.png",
     "static/media/imdb.png": "/Random-Movie-Finder/static/media/imdb.bb2ec1e8a70a30b63c14.png",
     "index.html": "/Random-Movie-Finder/index.html",
     "main.3b3e20d1.css.map": "/Random-Movie-Finder/static/css/main.3b3e20d1.css.map",
-    "main.9ef29456.js.map": "/Random-Movie-Finder/static/js/main.9ef29456.js.map"
+    "main.b537de09.js.map": "/Random-Movie-Finder/static/js/main.b537de09.js.map"
   },
   "entrypoints": [
     "static/css/main.3b3e20d1.css",
-    "static/js/main.9ef29456.js"
+    "static/js/main.b537de09.js"
   ]
 }
