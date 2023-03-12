@@ -1,6 +1,6 @@
 {
   "homepage": "http://georgezalokostas.github.io/random-movie-finder",
-  "name": "random_movie_picker",
+  "name": "random_movie_finder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
