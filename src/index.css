@@ -110,12 +110,14 @@ a {
 .imdblogo {
   width: 60px;
   height: 30px;
+  padding-left: 5px;
 }
 
 .fmovieslogo {
   width: 70px;
   height: 30px;
   padding-left: 15px;
+  padding-right: 25px;
 }
 
 .teniesonlinelogo {
@@ -153,7 +155,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .imdbButton {
@@ -170,6 +172,7 @@ a {
   margin: 10px 0;
   border-color: #000000;
   border: 1.2px solid black;
+  width: 170px;
 }
 
 .fmoviesButton {
@@ -217,13 +220,13 @@ a {
   border: 1.2px solid black;
 }
 
-.imdbButton, .fmoviesButton, .teniesOnlineButton, .watchMoviesHDButton {
+ .fmoviesButton, .teniesOnlineButton, .watchMoviesHDButton {
   display: inline-flex;
   align-items: left;
-  justify-content: center;
+  justify-content: space-evenly;
   color: #000000;
   text-decoration: none;
-  padding: 5px 4px;
+  padding: 8px 2px;
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
