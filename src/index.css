@@ -115,6 +115,18 @@ a {
 .fmovieslogo {
   width: 70px;
   height: 30px;
+  padding-left: 15px;
+}
+
+.teniesonlinelogo {
+  width: 110px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.watchmovieshdlogo {
+  width: 110px;
+  height: 30px;  
 }
 
 .nextMovie {
@@ -179,7 +191,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: #33BCFF;
   color: #000000;
   text-decoration: none;
   padding: 5px;
@@ -188,4 +200,34 @@ a {
   font-size: 16px;
   margin: 10px 0;
   border: 1.2px solid black;
+}
+
+.watchMoviesHDButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FDD92A;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  border: 1.2px solid black;
+}
+
+.imdbButton, .fmoviesButton, .teniesOnlineButton, .watchMoviesHDButton {
+  display: inline-flex;
+  align-items: left;
+  justify-content: center;
+  color: #000000;
+  text-decoration: none;
+  padding: 5px 4px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  border: 1.2px solid black;
+  width:200px;
 }

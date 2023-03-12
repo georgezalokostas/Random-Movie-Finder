@@ -1,7 +1,11 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faClapperboard} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClapperboard } from "@fortawesome/free-solid-svg-icons";
+import imdbLogo from "./images/imdb.png";
+import fmoviesLogo from "./images/fmovies.png";
+import teniesOnlineLogo from "./images/teniesonline.png";
+import watchMoviesHD from "./images/watchmovieshd.png";
 
 const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
   if (!movie) {
@@ -31,18 +35,20 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
             {movie.Genre + " " + " | " + " " + "⭐" + movie.imdbRating + "/10"}
           </h4>
           <br />
-          <h5>By: {movie.Director}</h5>
-          <h5>{movie.Plot}</h5>
-          <h5>Starring: {movie.Actors}</h5>
           <div className="buttons-container">
             <a
               href={"https://www.imdb.com/title/" + movie.imdbID}
               target="_blank"
               className="imdbButton"
             >
-              <span className="openIn">Open in: </span>
-              <img className="imdblogo" src="/imdb.png" alt="IMDB" />
+              <span>Open in:</span>
+              <img className="imdblogo" src={imdbLogo} alt="IMDB" />
             </a>
+          </div>
+          <h5>By: {movie.Director}</h5>
+          <h5>{movie.Plot}</h5>
+          <h5>Starring: {movie.Actors}</h5>
+          <div className="buttons-container">
             <a
               href={
                 "https://fmovies.ps/search/" +
@@ -54,9 +60,8 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               className="fmoviesButton"
             >
               <span className="openIn">Search in: </span>
-              <img className="fmovieslogo" src="/fmovies.png" alt="Fmovies" />
+              <img className="fmovieslogo" src={fmoviesLogo} alt="Fmovies" />
             </a>
-
             <a
               href={
                 "https://tenies-online.best/?story=" +
@@ -68,11 +73,18 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               target="_blank"
               className="teniesOnlineButton"
             >
-              <span className="openIn">Search in: TeniesOnline</span>
-              <img
-                className="teniesOnline"
-              />
-              <FontAwesomeIcon icon={faClapperboard} />
+              <span className="openIn">Search in:</span>
+              <img className="teniesonlinelogo" src={teniesOnlineLogo} />
+            </a>
+            <a
+              href={
+                "https://watchmovieshd.ru/home?fbclid=IwAR2qMhHuJd6o__P1WqixZ98D7QfhpMBcxpjMfRpOA5XXLguwTMa9HbUjVEU"
+              }
+              target="_blank"
+              className="watchMoviesHDButton"
+            >
+              <span className="openIn">Search in:</span>
+              <img className="watchmovieshdlogo" src={watchMoviesHD} />
             </a>
           </div>
         </div>
