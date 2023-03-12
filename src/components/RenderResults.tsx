@@ -1,5 +1,7 @@
 import { IMovie } from "../interfaces/IMovie";
 import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faClapperboard} from '@fortawesome/free-solid-svg-icons'
 
 const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
   if (!movie) {
@@ -39,7 +41,7 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               className="imdbButton"
             >
               <span className="openIn">Open in: </span>
-              <img className="imdblogo" src="/imdb.png" alt="IMDb Logo" />
+              <img className="imdblogo" src="/imdb.png" alt="IMDB" />
             </a>
             <a
               href={
@@ -51,12 +53,26 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               target="_blank"
               className="fmoviesButton"
             >
-              <span className="openIn">Watch in: </span>
+              <span className="openIn">Search in: </span>
+              <img className="fmovieslogo" src="/fmovies.png" alt="Fmovies" />
+            </a>
+
+            <a
+              href={
+                "https://tenies-online.best/?story=" +
+                movie.Title.split(" ").join("+") +
+                "+" +
+                movie.Year +
+                "&sfSbm=Search&titleonly=3&do=search&subaction=search"
+              }
+              target="_blank"
+              className="teniesOnlineButton"
+            >
+              <span className="openIn">Search in: TeniesOnline</span>
               <img
-                className="fmovieslogo"
-                src="/fmovies.png"
-                alt="Fmovies Logo"
+                className="teniesOnline"
               />
+              <FontAwesomeIcon icon={faClapperboard} />
             </a>
           </div>
         </div>
