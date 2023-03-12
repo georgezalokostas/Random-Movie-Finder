@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/random-movie-finder/static/css/main.3b3e20d1.css",
-    "main.js": "/random-movie-finder/static/js/main.93b7228a.js",
-    "static/media/rottentomatoes.png": "/random-movie-finder/static/media/rottentomatoes.b04fe1f023c57abcf2f6.png",
-    "static/media/fmovies.png": "/random-movie-finder/static/media/fmovies.4fe00a0a434000d5babb.png",
-    "static/media/watchmovieshd.png": "/random-movie-finder/static/media/watchmovieshd.3d3c04d1bd3acdf646ed.png",
-    "static/media/imdb.png": "/random-movie-finder/static/media/imdb.bb2ec1e8a70a30b63c14.png",
-    "index.html": "/random-movie-finder/index.html",
-    "main.3b3e20d1.css.map": "/random-movie-finder/static/css/main.3b3e20d1.css.map",
-    "main.93b7228a.js.map": "/random-movie-finder/static/js/main.93b7228a.js.map"
+    "main.css": "/Random-Movie-Finder/static/css/main.3b3e20d1.css",
+    "main.js": "/Random-Movie-Finder/static/js/main.9ef29456.js",
+    "static/media/rottentomatoes.png": "/Random-Movie-Finder/static/media/rottentomatoes.b04fe1f023c57abcf2f6.png",
+    "static/media/fmovies.png": "/Random-Movie-Finder/static/media/fmovies.4fe00a0a434000d5babb.png",
+    "static/media/watchmovieshd.png": "/Random-Movie-Finder/static/media/watchmovieshd.3d3c04d1bd3acdf646ed.png",
+    "static/media/imdb.png": "/Random-Movie-Finder/static/media/imdb.bb2ec1e8a70a30b63c14.png",
+    "index.html": "/Random-Movie-Finder/index.html",
+    "main.3b3e20d1.css.map": "/Random-Movie-Finder/static/css/main.3b3e20d1.css.map",
+    "main.9ef29456.js.map": "/Random-Movie-Finder/static/js/main.9ef29456.js.map"
   },
   "entrypoints": [
     "static/css/main.3b3e20d1.css",
-    "static/js/main.93b7228a.js"
+    "static/js/main.9ef29456.js"
   ]
 }
