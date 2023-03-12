@@ -37,12 +37,21 @@ const DisplayMovieDetails = ({ movie }: { movie: IMovie | undefined }) => {
               <img className="imdblogo" src={imdbLogo} alt="IMDB" />
             </a>
             <a
-              href={"https://www.rottentomatoes.com/search?search=" + movie.Title.split(" ").join("+") + movie.Year}
+              href={
+                "https://www.rottentomatoes.com/search?search=" +
+                movie.Title.split(" ").join("+") +
+                "+" +
+                movie.Year
+              }
               target="_blank"
               className="rottentomatoesButton"
             >
               <span>Open in:</span>
-              <img className="rottentomatoeslogo" src={rottenTomatoesLogo} alt="RottenTomatoes" />
+              <img
+                className="rottentomatoeslogo"
+                src={rottenTomatoesLogo}
+                alt="RottenTomatoes"
+              />
             </a>
           </div>
           <h5>By: {movie.Director}</h5>
