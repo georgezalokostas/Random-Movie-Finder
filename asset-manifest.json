@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/random-movie-finder/static/css/main.0160707a.css",
-    "main.js": "/random-movie-finder/static/js/main.dd5e05f7.js",
+    "main.css": "/random-movie-finder/static/css/main.3b3e20d1.css",
+    "main.js": "/random-movie-finder/static/js/main.93b7228a.js",
+    "static/media/rottentomatoes.png": "/random-movie-finder/static/media/rottentomatoes.b04fe1f023c57abcf2f6.png",
+    "static/media/fmovies.png": "/random-movie-finder/static/media/fmovies.4fe00a0a434000d5babb.png",
+    "static/media/watchmovieshd.png": "/random-movie-finder/static/media/watchmovieshd.3d3c04d1bd3acdf646ed.png",
+    "static/media/imdb.png": "/random-movie-finder/static/media/imdb.bb2ec1e8a70a30b63c14.png",
     "index.html": "/random-movie-finder/index.html",
-    "main.0160707a.css.map": "/random-movie-finder/static/css/main.0160707a.css.map",
-    "main.dd5e05f7.js.map": "/random-movie-finder/static/js/main.dd5e05f7.js.map"
+    "main.3b3e20d1.css.map": "/random-movie-finder/static/css/main.3b3e20d1.css.map",
+    "main.93b7228a.js.map": "/random-movie-finder/static/js/main.93b7228a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0160707a.css",
-    "static/js/main.dd5e05f7.js"
+    "static/css/main.3b3e20d1.css",
+    "static/js/main.93b7228a.js"
   ]
 }
