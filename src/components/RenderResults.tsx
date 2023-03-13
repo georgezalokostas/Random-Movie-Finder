@@ -1,5 +1,4 @@
 import { IMovie } from "../interfaces/IMovie";
-import { resultsHeaderText } from "./text_arrays/ResultsHeaderText";
 import imdbLogo from "./images/imdb.png";
 import fmoviesLogo from "./images/fmovies.png";
 import teniesOnlineLogo from "./images/teniesonline.png";
