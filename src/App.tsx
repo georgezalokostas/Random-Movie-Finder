@@ -27,17 +27,14 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       GetMovieData();
-    }, 250);
+    }, 200);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    
     <div className="Components">
       <RenderResults movie={movie} />
-      {isLoading ? (
-        <h4></h4>
-      ) : (
+      {!isLoading && (
         <button
           className="nextMovie"
           onClick={() => {
