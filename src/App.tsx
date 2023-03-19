@@ -9,6 +9,10 @@ const App = () => {
   const [movie, setMovie] = useState<IMovie>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
+  //TODO: 1) Add an initial fetch of 10 elements from the API
+  //TODO: 2) Get 10 results from the API and store them in an array
+  //TODO: 3) Add Dropdowns to filter the results by genre, year, etc.
+  
   const GetMovieData = async () => {
     let searchTerm = getRandomItem(MoviesData);
     const url = `https://www.omdbapi.com/?apikey=19260989&i=${searchTerm.id}`;
