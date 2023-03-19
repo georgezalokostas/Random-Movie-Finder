@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IMovie } from "./interfaces/IMovie";
 import RenderResults from "./components/RenderResults";
-import { MoviesData } from "./components/text_arrays/MoviesData";
+import { MoviesData } from "./components/MoviesData";
 import { getRandomItem } from "./components/Functions";
 import Footer from "./components/Footer";
 
