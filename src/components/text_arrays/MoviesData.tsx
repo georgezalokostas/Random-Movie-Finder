@@ -1,4 +1,4 @@
-export const movies = [
+export const MoviesData = [
   {
     id: "tt17663992",
     year: "2023",

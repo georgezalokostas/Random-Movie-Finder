@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { IMovie } from "./interfaces/IMovie";
 import RenderResults from "./components/RenderResults";
-import { MoviesIDs } from "./components/text_arrays/MoviesIDs";
+import { MoviesData } from "./components/text_arrays/MoviesData";
 import { getRandomItem } from "./components/Functions";
 import Footer from "./components/Footer";
 
@@ -10,8 +10,8 @@ const App = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const GetMovieData = async () => {
-    let searchTerm = getRandomItem(MoviesIDs);
-    const url = `https://www.omdbapi.com/?apikey=19260989&i=${searchTerm}`;
+    let searchTerm = getRandomItem(MoviesData);
+    const url = `https://www.omdbapi.com/?apikey=19260989&i=${searchTerm.id}`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
