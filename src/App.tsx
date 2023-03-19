@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       GetMovieData();
-    }, 200);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
